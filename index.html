@@ -3,111 +3,170 @@
 
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-
-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Mascotas - Prueba Práctica</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
 
 <body>
+    <!-- Navbar -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-lg py-3">
             <div class="container">
-                <h1 class="navbar-brand fw-bold">PetShop Amigos Peludos</h1>
-                <ul class="navbar-nav">
-                    <li class="nav-item">Inicio</li>
-                    <li class="nav-item">Productos</li>
-                    <li class="nav-item">Servicios</li>
-                    <li class="nav-item">Contacto</li>
-                </ul>
+                <a class="navbar-brand fw-bold fs-4" href="#">PetShop Amigos Peludos</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto gap-lg-3">
+                        <li class="nav-item"><a class="nav-link active fw-semibold" href="#">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
+
     <main>
-        <section id="bienvenida">
-            <h2>Bienvenidos a nuestra tienda</h2>
-            <p>Encuentra todo lo que necesitas para tu mascota</p>
+        <!-- Sección de Bienvenida -->
+        <section id="bienvenida" class="py-5">
+            <h2 class="text-center mb-4 fw-bold">Bienvenidos a nuestra tienda</h2>
+            <p class="text-center text-muted fs-5 mb-5">Encuentra todo lo que necesitas para tu mascota</p>
         </section>
-        <section id="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <div class="row productos">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card producto">
-                        <div class="card-body">
-                            <h3 class="card-title">Alimento Premium</h3>
-                            <p class="card-text">Nutrición de alta calidad para tu mascota</p>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver
-                                detalles</button>
+
+        <!-- Productos Destacados -->
+        <section id="productos-destacados" class="py-5">
+            <div class="container">
+                <h2 class="text-center">Productos Destacados</h2>
+                <div class="row productos">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-center producto">
+                            <div class="card-body">
+                                <h3 class="card-title">Alimento Premium</h3>
+                                <p class="card-text">Nutrición de alta calidad para tu mascota</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Ver detalles</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card producto">
-                        <div class="card-body">
-                            <h3 class="card-title">Juguetes Interactivos</h3>
-                            <p class="card-text">Diversión garantizada para tu mascota</p>
-                            <button class="btn btn-primary">Ver detalles</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-center producto">
+                            <div class="card-body">
+                                <h3 class="card-title">Juguetes Interactivos</h3>
+                                <p class="card-text">Diversión garantizada para tu mascota</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                    Ver detalles</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card producto">
-                        <div class="card-body">
-                            <h3 class="card-title">Camas Confortables</h3>
-                            <p class="card-text">El mejor descanso para tu amigo peludo</p>
-                            <button class="btn btn-primary">Ver detalles</button>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-center producto">
+                            <div class="card-body">
+                                <h3 class="card-title">Camas Confortables</h3>
+                                <p class="card-text">El mejor descanso para tu amigo peludo</p>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                                    Ver detalles</button>
+                            </div>
                         </div>
                     </div>
                 </div>
         </section>
-        <section id="servicios">
-            <h2>Nuestros Servicios</h2>
-            <div class="row servicios">
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card servicio">
-                        <div class="card-body">
-                            <h3 class="card-title">Peluquería</h3>
-                            <p class="card-text">Servicio profesional de grooming</p>
-                            <button class="btn btn-primary">Más información</button>
+
+        <!-- Servicios -->
+        <section id="servicios" class="py-5">
+            <h2 class="text-center">Nuestros Servicios</h2>
+            <div class="container">
+
+                <div class="row servicios">
+                    <div class="col-12 col-md-6">
+                        <div class="card text-center servicio">
+                            <div class="card-body">
+                                <h3 class="card-title">Peluquería</h3>
+                                <p class="card-text">Servicio profesional de grooming</p>
+                                <button class="btn btn-primary">Más información</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card servicio">
-                        <div class="card-body">
-                            <h3 class="card-title">Veterinaria</h3>
-                            <p class="card-text">Atención médica especializada</p>
-                            <button class="btn btn-primary">Más información</button>
+                    <div class="col-12 col-md-6 ">
+                        <div class="card text-center servicio">
+                            <div class="card-body">
+                                <h3 class="card-title">Veterinaria</h3>
+                                <p class="card-text">Atención médica especializada</p>
+                                <button class="btn btn-primary">Más información</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
         <p>PetShop Amigos Peludos (c) 2026</p>
     </footer>
 </body>
 
+<!-- Modals -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Alimento Premium</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                aaaa
+                Nuestro alimento premium está elaborado con ingredientes naturales y balanceados, asegurando energía,
+                vitalidad y una salud óptima para tu mascota día tras día.
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Juguetes Interactivos</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Diseñados para estimular la mente y el cuerpo, estos juguetes fomentan la diversión, el aprendizaje y
+                los momentos de juego inolvidables junto a tu amigo peludo. </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Camas Confortables</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Cada cama está fabricada con materiales suaves y resistentes que garantizan comodidad y descanso
+                profundo, haciendo que tu mascota se sienta en su lugar favorito del hogar.</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Comprar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
 </html>

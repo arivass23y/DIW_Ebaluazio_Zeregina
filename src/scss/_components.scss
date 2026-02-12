@@ -1,4 +1,28 @@
+nav {
+    @include nav-styles($primary-color);
+}
+
 body {
     font-family: $font-primary;
-    background-color: #f8f9fa;
+    background-color: white;
+}
+
+.card {
+    @include card-styles(black);
+
+    h3 {
+        color: $accent-color;
+    }
+
+    p {
+        color: $primary-color;
+    }
+
+    button {
+        @include button-styles($secondary-color, white);
+    }
+}
+
+.btn btn-primary {
+    @include button-styles($primary-color, white);
 }

@@ -1,0 +1,25 @@
+@mixin card-styles($color-shadow) {
+    box-shadow: 0 4px 6px $color-shadow;
+    padding: 10px;
+    margin: 10px;
+}
+
+@mixin nav-styles($bg-color) {
+    background-color: $bg-color;
+    a {
+        color: white !important;;
+        &:hover {
+            color: $accent-color !important;;
+        }
+    }
+}
+
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    padding: 10px 20px;
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}
