@@ -6,11 +6,19 @@
 
 @mixin nav-styles($bg-color) {
     background-color: $bg-color;
+
     a {
-        color: white !important;;
+        color: white !important;
+        ;
+
         &:hover {
-            color: $accent-color !important;;
+            color: $accent-color !important;
+            ;
         }
+    }
+
+    button {
+        background-color: white !important;
     }
 }
 
@@ -19,6 +27,7 @@
     color: $text-color;
     border: none;
     padding: 10px 20px;
+
     &:hover {
         background-color: darken($bg-color, 10%);
     }
